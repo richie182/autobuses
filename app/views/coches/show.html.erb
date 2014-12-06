@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @coch.matricula %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @coch.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_coch_path(@coch) %> |
+<%= link_to 'Back', coches_path %>

@@ -1,0 +1,15 @@
+<h2> Iniciar sesión </h2>
+<%= form_tag({:controller => "test_sesiones", :action => "iniciar_sesion"}, :method => "post") do %>
+   <%= label_tag "nombre_usuario", "Nombre de usuario" %>
+   <br />
+   <%= text_field_tag "nombre_usuario", "", :required => "required" %>
+   <br />
+   <%= label_tag "contrasena", "Contraseña" %>
+   <br />
+   <%= password_field_tag "contrasena", "", :required => "required" %>
+   <br />
+   <%= submit_tag "Ingresar" %>
+<% end %>
+<% if @error_login %>
+ <div style="color: #f00;"> El nombre de usuario o la contraseña son incorrectos. </div>
+<% end %>

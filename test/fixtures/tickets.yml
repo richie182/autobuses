@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  folio: MyString
+  nombre: MyString
+  correo: MyString
+  vendido: 2014-12-05 03:07:28
+  trayecto: MyString
+  precio: 1
+  puntos: 1
+  viaje: MyString
+  vendido: MyString
+
+two:
+  folio: MyString
+  nombre: MyString
+  correo: MyString
+  vendido: 2014-12-05 03:07:28
+  trayecto: MyString
+  precio: 1
+  puntos: 1
+  viaje: MyString
+  vendido: MyString

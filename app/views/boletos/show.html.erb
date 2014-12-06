@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Folio:</strong>
+  <%= @boleto.folio %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @boleto.usuario %>
+</p>
+
+<p>
+  <strong>Id trayecto:</strong>
+  <%= @boleto.id_trayecto %>
+</p>
+
+<p>
+  <strong>Fecha venta:</strong>
+  <%= @boleto.fecha_venta %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @boleto.total %>
+</p>
+
+<p>
+  <strong>Puntos:</strong>
+  <%= @boleto.puntos %>
+</p>
+
+<%= link_to 'Edit', edit_boleto_path(@boleto) %> |
+<%= link_to 'Back', boletos_path %>

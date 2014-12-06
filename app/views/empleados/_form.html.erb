@@ -1,0 +1,118 @@
+<%= form_for(@empleado) do |f| %>
+  <% if @empleado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@empleado.errors.count, "error") %> prohibited this empleado from being saved:</h2>
+
+      <ul>
+      <% @empleado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <% if @abcd == 1 %>
+
+
+  <div class="field">
+    <%= f.label :contraseña %><br>
+    <%= f.text_field :contraseña %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :corre %><br>
+    <%= f.text_field :corre %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :hrtrabajada %><br>
+    <%= f.number_field :hrtrabajada %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  <% else %>
+  <div class="field">
+    <%= f.label :usuario %><br>
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :contraseña %><br>
+    <%= f.text_field :contraseña %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :corre %><br>
+    <%= f.text_field :corre %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :hrtrabajada %><br>
+    <%= f.number_field :hrtrabajada %>
+  </div>
+  
+
+
+
+<label for="categoria"><b>Categoria :</b></label>
+
+  <select name="empleado[categoria]" class="comboBox">
+      <option value=sin Asignar>Sin Asignar</option>
+      <option value=administrador>Administrador</option>
+      <option value=Vendedor>Vendedor</option>
+      <option value=empleado general>Empleado General</option>
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  <%end%>
+
+  
+<% end %>

@@ -1,0 +1,40 @@
+<h1>Listing empleados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Contraseña</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
+      <th>Corre</th>
+      <th>Direccion</th>
+      <th>Hrtrabajada</th>
+      <th>Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empleados.each do |empleado| %>
+      <tr>
+        <td><%= empleado.usuario %></td>
+        <td><%= empleado.contraseña %></td>
+        <td><%= empleado.nombre %></td>
+        <td><%= empleado.telefono %></td>
+        <td><%= empleado.corre %></td>
+        <td><%= empleado.direccion %></td>
+        <td><%= empleado.hrtrabajada %></td>
+        <td><%= empleado.categoria %></td>
+        <td><%= link_to 'Show', empleado %></td>
+        <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
+        <td><%= link_to 'Destroy', empleado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br><%= link_to 'Menu principar',  :controller => "principal", :action => "index"%></br>
+
+<%= link_to 'New Empleado', new_empleado_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@terminal_llegada) do |f| %>
+  <% if @terminal_llegada.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@terminal_llegada.errors.count, "error") %> prohibited this terminal_llegada from being saved:</h2>
+
+      <ul>
+      <% @terminal_llegada.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :idterminal2 %><br>
+    <%= f.text_field :idterminal2 %>
+  </div>
+  <div class="field">
+    <%= f.label :nombreterminal2 %><br>
+    <%= f.text_field :nombreterminal2 %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono2 %><br>
+    <%= f.text_field :telefono2 %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion2 %><br>
+    <%= f.text_field :direccion2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

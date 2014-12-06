@@ -1,0 +1,39 @@
+<h1>Listing trayectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id trayecto</th>
+      <th>Idterminal</th>
+      <th>Idterminal2</th>
+      <th>Hora salida</th>
+      <th>Hora llegada</th>
+      <th>Precio</th>
+      <th>Puntos</th>
+      <th>Idautobus</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trayectos.each do |trayecto| %>
+      <tr>
+        <td><%= trayecto.id_trayecto %></td>
+        <td><%= trayecto.idterminal %></td>
+        <td><%= trayecto.idterminal2 %></td>
+        <td><%= trayecto.hora_salida %></td>
+        <td><%= trayecto.hora_llegada %></td>
+        <td><%= trayecto.precio %></td>
+        <td><%= trayecto.puntos %></td>
+        <td><%= trayecto.idautobus %></td>
+        <td><%= link_to 'Show', trayecto %></td>
+        <td><%= link_to 'Edit', edit_trayecto_path(trayecto) %></td>
+        <td><%= link_to 'Destroy', trayecto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trayecto', new_trayecto_path %>

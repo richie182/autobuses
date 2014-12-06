@@ -1,0 +1,99 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :vendido %><br>
+    <%= f.datetime_select :vendido , :disabled => true %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :folio %><br>
+    <%= f.text_field :folio %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+
+
+
+
+
+
+
+  <label for="]"><b>Trayecto :</b></label>
+
+  <select name="ticket[trayecto]" class="comboBox">
+      <option value=vermex>Veracruz-Mexicor      $700</option>
+      <option value=verpue>Veracruz-Puebla       $400</option>
+     
+      <option value=mexver>Puebla-Veracruz       $400</option>
+      <option value=mexpue>Mexico-Veracruz        $700</option>
+
+  </select>
+
+  <br>
+
+  <br>
+  
+
+
+<label for="]"><b>Fecha :</b></label>
+
+  <select name="ticket[viaje]" class="comboBox">
+     <option value=01102015>01-octubre-2014</option>  
+        <option value=02102015>02-octubre-2014</option>  
+        <option value=03102015>03-octubre-2014</option>  
+        <option value=04102015>04-octubre-2014</option>  
+        <option value=05102015>05-octubre-2014</option>  
+        <option value=06102015>06-octubre-2014</option>  
+        <option value=07102015>07-octubre-2014</option>  
+        <option value=08102015>08-octubre-2014</option>  
+        <option value=09102015>09-octubre-2014</option>  
+        <option value=10102015>10-octubre-2014</option>  
+        <option value=11102015>11-octubre-2014</option>  
+        <option value=12102015>12-octubre-2014</option>  
+        <option value=13102015>13-octubre-2014</option>  
+        <option value=14102015>14-octubre-2014</option>  
+        <option value=15102015>15-octubre-2014</option>  
+        <option value=16102015>16-octubre-2014</option>  
+        <option value=17102015>17-octubre-2014</option>  
+        <option value=18102015>18-octubre-2014</option>  
+        <option value=19102015>19-octubre-2014</option>  
+        <option value=20102015>20-octubre-2014</option>  
+        <option value=21102015>21-octubre-2014</option>  
+        <option value=22102015>22-octubre-2014</option>  
+        <option value=23102015>23-octubre-2014</option>  
+        <option value=24102015>24-octubre-2014</option>  
+        <option value=25102015>25-octubre-2014</option>  
+        <option value=26102015>26-octubre-2014</option>  
+        <option value=27102015>27-octubre-2014</option>  
+        <option value=28102015>28-octubre-2014</option>  
+        <option value=29102015>29-octubre-2014</option>  
+        <option value=30102015>30-octubre-2014</option>  
+        <option value=31102015>31-octubre-2014</option>  
+
+  </select>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

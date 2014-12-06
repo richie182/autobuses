@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Folio:</strong>
+  <%= @ticket.folio %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ticket.nombre %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @ticket.correo %>
+</p>
+
+<p>
+  <strong>Vendido:</strong>
+  <%= @ticket.vendido %>
+</p>
+
+<p>
+  <strong>Trayecto:</strong>
+  <%= @ticket.trayecto %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @ticket.precio %>
+</p>
+
+<p>
+  <strong>Puntos:</strong>
+  <%= @ticket.puntos %>
+</p>
+
+<p>
+  <strong>Viaje:</strong>
+  <%= @ticket.viaje %>
+</p>
+
+<p>
+  <strong>Vendido:</strong>
+  <%= @ticket.vendido %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

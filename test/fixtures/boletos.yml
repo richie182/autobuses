@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  folio: 1
+  usuario: MyString
+  id_trayecto: MyString
+  fecha_venta: 2014-11-03 16:41:25
+  total: 1
+  puntos: 1
+
+two:
+  folio: 1
+  usuario: MyString
+  id_trayecto: MyString
+  fecha_venta: 2014-11-03 16:41:25
+  total: 1
+  puntos: 1

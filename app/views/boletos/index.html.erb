@@ -1,0 +1,35 @@
+<h1>Listing boletos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Folio</th>
+      <th>Usuario</th>
+      <th>Id trayecto</th>
+      <th>Fecha venta</th>
+      <th>Total</th>
+      <th>Puntos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boletos.each do |boleto| %>
+      <tr>
+        <td><%= boleto.folio %></td>
+        <td><%= boleto.usuario %></td>
+        <td><%= boleto.id_trayecto %></td>
+        <td><%= boleto.fecha_venta %></td>
+        <td><%= boleto.total %></td>
+        <td><%= boleto.puntos %></td>
+        <td><%= link_to 'Show', boleto %></td>
+        <td><%= link_to 'Edit', edit_boleto_path(boleto) %></td>
+        <td><%= link_to 'Destroy', boleto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boleto', new_boleto_path %>

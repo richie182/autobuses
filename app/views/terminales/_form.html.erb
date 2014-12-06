@@ -1,0 +1,33 @@
+<%= form_for(@terminale) do |f| %>
+  <% if @terminale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@terminale.errors.count, "error") %> prohibited this terminale from being saved:</h2>
+
+      <ul>
+      <% @terminale.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :idterminal %><br>
+    <%= f.text_field :idterminal %>
+  </div>
+  <div class="field">
+    <%= f.label :nombreterminal %><br>
+    <%= f.text_field :nombreterminal %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

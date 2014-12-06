@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id trayecto:</strong>
+  <%= @trayecto.id_trayecto %>
+</p>
+
+<p>
+  <strong>Idterminal:</strong>
+  <%= @trayecto.idterminal %>
+</p>
+
+<p>
+  <strong>Idterminal2:</strong>
+  <%= @trayecto.idterminal2 %>
+</p>
+
+<p>
+  <strong>Hora salida:</strong>
+  <%= @trayecto.hora_salida %>
+</p>
+
+<p>
+  <strong>Hora llegada:</strong>
+  <%= @trayecto.hora_llegada %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @trayecto.precio %>
+</p>
+
+<p>
+  <strong>Puntos:</strong>
+  <%= @trayecto.puntos %>
+</p>
+
+<p>
+  <strong>Idautobus:</strong>
+  <%= @trayecto.idautobus %>
+</p>
+
+<%= link_to 'Edit', edit_trayecto_path(@trayecto) %> |
+<%= link_to 'Back', trayectos_path %>
